@@ -10,18 +10,18 @@ In the context of this problem, and to keep things simple, our translation flow 
 
 ```json
 {
-  "timestamp": "2021-11-15T20:43:49.349Z",
+  "timestamp": "2021-11-15T20:43:49.349",
   "translation_id": "5aa5b2f39f7254a75aa4",
   "source_language": "en",
   "target_language": "fr",
   "client_name": "easyjet",
   "event_name": "translation_delivered",
-  "duration": 20,
+  "duration": 2000,
   "nr_words": 100
 }
 ```
 
-- Your mission is to build a simple ~~command line application~~ REST API that accepts and parses a stream of events and provides endpoints to get time time to time, real time and so on.
+- Your mission is to build a simple ~~command line application~~ REST API that accepts and parses a stream of events and provides endpoints to get time to time, real time and so on.
 
 - In this case, we're interested in calculating, for every minute, a moving average of the translation delivery time for the last X minutes.
 
@@ -29,9 +29,9 @@ In the context of this problem, and to keep things simple, our translation flow 
 
 ```json
 {
-  "start": "2018-12-26 18:16:00",
-  "finish": "2018-12-26 18:17:00",
-  "average_delivery_time": 25.5 // you'll get that from translation_event.duration
+  "start": "2021-11-15T20:40:00.000",
+  "end": "2021-11-15T20:50:00.000",
+  "average_delivery_time": 5384.328 // you'll get that from translation_event.duration
 }
 ```
 
