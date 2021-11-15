@@ -5,8 +5,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "start": "node ./dist/index.js",
-    "dev": "tsc --watch",
+    "dev": "tsc && node ./dist/index.js",
     "tc": "tsc --noEmit --pretty"
   },
   "devDependencies": {

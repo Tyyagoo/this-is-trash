@@ -15,18 +15,22 @@ type TranslationEvent = {
 
 const API_URL = "http://localhost:8080/events/translation";
 
+const randomInt = (upper_bound: number) => {
+  return Math.floor(Math.random() * upper_bound);
+};
+
 const generateRandomTranslation = (): TranslationEvent => {
   const translation_id = uuid();
-  const timestamp = new Date().toISOString();
-  const source_language = languages[Math.random() * languages.length];
-  const target_language = languages[Math.random() * languages.length];
+  const timestamp = new Date().toISOString().replace("Z", "");
+  const source_language = languages[randomInt(languages.length)];
+  const target_language = languages[randomInt(languages.length)];
   const client_name = "easyjet";
   const event_name = "translation_delivered";
-  const nr_words = Math.floor(Math.random() * 4096);
+  const nr_words = randomInt(4096);
   const duration =
     source_language === target_language
       ? 0
-      : Math.floor(Math.random() * 5 * nr_words);
+      : Math.floor(Math.random() * 10 * nr_words);
 
   return {
     translation_id,
