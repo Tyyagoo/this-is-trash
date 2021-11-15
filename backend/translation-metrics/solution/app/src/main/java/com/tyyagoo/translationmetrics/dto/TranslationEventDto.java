@@ -1,13 +1,11 @@
 package com.tyyagoo.translationmetrics.dto;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.PropertyNamingStrategies;
 import com.fasterxml.jackson.databind.annotation.JsonNaming;
 import com.tyyagoo.translationmetrics.model.TranslationEvent;
 import lombok.Data;
-import org.springframework.data.domain.Range;
-import reactor.core.publisher.Flux;
-import reactor.core.publisher.Mono;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -63,28 +61,35 @@ public class TranslationEventDto {
         private String start;
         private String end;
 
-        @JsonProperty("average_delivery_time")
-        private double averageDeliveryTime;
+        @JsonIgnore
+        private int sum;
+        @JsonIgnore
+        private int count;
 
-        static public Mono<Average> fromEventFlux(Range<String> range, Flux<TranslationEvent> flux) {
-            var avg = new Average();
+        public Average (LocalDateTime from, LocalDateTime to) {
+            this.start = from.toString();
+            this.end = to.toString();
+            this.sum = 0;
+            this.count = 0;
+        }
 
-            range.getLowerBound()
-                    .getValue()
-                    .ifPresentOrElse(avg::setStart, () -> avg.setStart(""));
+        public Average(int sum, int count) {
+            this.sum = sum;
+            this.count = count;
+        }
 
-            range.getUpperBound()
-                    .getValue()
-                    .ifPresentOrElse(avg::setEnd, () -> avg.setEnd(""));
+        public Average combine(Average other) {
+            sum += other.sum;
+            count += other.count;
+            return this;
+        }
 
-            // GAMBIARRA
-            return flux
-                    .reduce(0, (acc, curr) -> Integer.sum(acc, curr.getDuration()))
-                    .zipWith(flux.count(), (sum, size) -> Long.divideUnsigned(sum.longValue(), size))
-                    .map(average -> {
-                        avg.setAverageDeliveryTime(average);
-                        return avg;
-                    });
+        @JsonProperty(value = "average_delivery_time")
+        public double getAverageDeliveryTime() {
+            if (count < 1)
+                return 0;
+
+            return (double) sum / count;
         }
     }
 }
