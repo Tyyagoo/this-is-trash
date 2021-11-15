@@ -10,7 +10,7 @@ In the context of this problem, and to keep things simple, our translation flow 
 
 ```json
 {
-  "timestamp": "2018-12-26 18:12:19.903159",
+  "timestamp": "2021-11-15T20:43:49.349Z",
   "translation_id": "5aa5b2f39f7254a75aa4",
   "source_language": "en",
   "target_language": "fr",
