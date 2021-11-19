@@ -1,0 +1,18 @@
+{
+  "name": "03-fp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "functional-javascript-workshop",
+    "dev": "functional-javascript-workshop run",
+    "verify": "functional-javascript-workshop verify",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "functional-javascript-workshop": "^1.0.6"
+  }
+}
