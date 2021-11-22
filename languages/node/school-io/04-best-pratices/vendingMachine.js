@@ -11,16 +11,6 @@ var products = [
 ];
 
 module.exports = {
-  canAfford: function (amount) {
-    if (!this.isValidAmount(amount)) {
-      errorMessage = "Invalid Input";
-    }
-    if (errorMessage) {
-      throw new Error(errorMessage);
-    }
-    return balanceManager.canAfford(amount);
-  },
-
   getProducts: function () {
     return products;
   },
@@ -35,14 +25,6 @@ module.exports = {
   insertCoin: function (coinType) {
     var value = changeHandler.getAmount(coinType);
     balanceManager.increaseBalance(value);
-  },
-
-  isValidAmount: function (amount) {
-    if (amount === null) {
-      return false;
-    } else {
-      return true;
-    }
   },
 
   releaseChange: function () {
