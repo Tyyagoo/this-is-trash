@@ -1,0 +1,18 @@
+{
+  "name": "05-promises",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "promise-it-wont-hurt",
+    "dev": "promise-it-wont-hurt run",
+    "verify": "promise-it-wont-hurt verify",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "promise-it-wont-hurt": "^1.1.3"
+  }
+}
