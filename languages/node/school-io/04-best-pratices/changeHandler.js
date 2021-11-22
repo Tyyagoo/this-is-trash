@@ -1,3 +1,7 @@
+function throwException(coinType) {
+  throw new Error("Unrecognized coin " + coinType);
+}
+
 module.exports = {
   getAmount: function (coinType) {
     // COINS:
@@ -5,17 +9,14 @@ module.exports = {
     // [n]ickel
     // [d]ime
     // [q]uarter
-    switch (coinType) {
-      case "p":
-        return 1;
-      case "n":
-        return 5;
-      case "d":
-        return 10;
-      case "q":
-        return 25;
-      default:
-        throw new Error("Unrecognized coin " + coinType);
-    }
+
+    return (
+      {
+        p: 1,
+        n: 5,
+        d: 10,
+        q: 25,
+      }[coinType] ?? throwException(coinType) // this looks worst than sw1tch LOL
+    );
   },
 };
