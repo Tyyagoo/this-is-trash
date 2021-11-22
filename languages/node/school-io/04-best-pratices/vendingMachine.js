@@ -21,26 +21,6 @@ module.exports = {
     return balanceManager.canAfford(amount);
   },
 
-  getAmount: function (coinType) {
-    // COINS:
-    // [p]enny
-    // [n]ickel
-    // [d]ime
-    // [q]uarter
-    switch (coinType) {
-      case "p":
-        return 1;
-      case "n":
-        return 5;
-      case "d":
-        return 10;
-      case "q":
-        return 25;
-      default:
-        throw new Error("Unrecognized coin " + coinType);
-    }
-  },
-
   getProducts: function () {
     return products;
   },
@@ -53,7 +33,7 @@ module.exports = {
   },
 
   insertCoin: function (coinType) {
-    var value = this.getAmount(coinType);
+    var value = changeHandler.getAmount(coinType);
     balanceManager.increaseBalance(value);
   },
 
