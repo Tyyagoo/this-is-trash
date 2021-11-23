@@ -1,0 +1,26 @@
+{
+  "name": "02-stream-adv",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "stream-adventure",
+    "verify": "stream-adventure verify",
+    "dev": "stream-adventure run",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concat-stream": "^2.0.0",
+    "duplexer2": "^0.1.4",
+    "split2": "^4.1.0",
+    "stream-adventure": "^4.3.2",
+    "stream-combiner": "^0.2.2",
+    "tar": "^6.1.11",
+    "through2": "^4.0.2",
+    "trumpet": "^1.7.2",
+    "ws": "^8.2.3"
+  }
+}

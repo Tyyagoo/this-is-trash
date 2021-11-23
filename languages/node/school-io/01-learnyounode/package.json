@@ -1,0 +1,21 @@
+{
+  "name": "learn-y-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "learnyounode",
+    "dev": "learnyounode run",
+    "help": "learnyounode help",
+    "verify": "learnyounode verify",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bl": "^5.0.0",
+    "learnyounode": "^4.2.2",
+    "through2-map": "^3.0.0"
+  }
+}

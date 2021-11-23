@@ -1,0 +1,18 @@
+{
+  "name": "04-best-pratices",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "js-best-practices",
+    "dev": "js-best-practices run",
+    "verify": "js-best-practices verify",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "js-best-practices": "^1.2.0"
+  }
+}

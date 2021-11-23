@@ -1,0 +1,23 @@
+{
+  "name": "08-tower-of-babell",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "tower-of-babel",
+    "dev": "tower-of-babel run",
+    "verify": "tower-of-babel verify",
+    "babel-node": "babel-node",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/cli": "^7.16.0",
+    "@babel/core": "^7.16.0",
+    "@babel/polyfill": "^7.12.1",
+    "@babel/preset-env": "^7.16.4",
+    "tower-of-babel": "^1.0.0"
+  }
+}
