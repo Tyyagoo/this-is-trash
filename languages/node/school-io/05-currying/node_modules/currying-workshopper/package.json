@@ -1,0 +1,22 @@
+{
+  "name": "currying-workshopper",
+  "version": "1.0.17",
+  "description": "Learn how to write a curry function in JavaScript and use it.",
+  "title": "Currying in JavaScript",
+  "author": "Brij Kishor <brijkishor.cse@gmail.com> (https://github.com/kishorsharma)",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:kishorsharma/currying-workshopper"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "path": "^0.11.14",
+    "workshopper": "^2.7.0",
+    "workshopper-exercise": "^2.4.0"
+  },
+  "bin": {
+    "curry": "./currying-workshopper.js"
+  },
+  "main": "./currying-workshopper.js",
+  "preferGlobal": true
+}

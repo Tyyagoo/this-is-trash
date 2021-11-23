@@ -1,0 +1,19 @@
+{
+  "name": "05-currying",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "curry",
+    "dev": "curry run",
+    "verify": "curry verify",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "currying-workshopper": "^1.0.17"
+  },
+  "devDependencies": {}
+}

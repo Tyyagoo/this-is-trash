@@ -1,0 +1,8 @@
+[
+    "IDENTITY",
+    "BINARY",
+    "DELAY INVOCATION",
+    "LONG_DELAY_INVOCATION",
+    "CALL AND APPLY",
+    "CURRY FUNCTION"
+]
