@@ -1,0 +1,20 @@
+{
+  "name": "11-lololodash",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "start": "lololodash",
+    "dev": "lololodash run",
+    "verify": "lololodash verify",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "lololodash": "^0.9.1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
