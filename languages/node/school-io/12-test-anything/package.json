@@ -1,0 +1,19 @@
+{
+  "name": "12-test-anything",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "test-anything",
+    "dev": "test-anything run",
+    "verify": "test-anything verify",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "tape": "^5.3.2",
+    "test-anything": "^1.1.7"
+  }
+}
