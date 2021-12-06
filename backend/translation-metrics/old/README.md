@@ -1,5 +1,11 @@
 # Translation Metrics
 
+## Note
+
+this proposal is so distant from the original,
+i'll just do whatever they want me to do,
+even if this isn't my objective with these challenges.
+
 ## Proposal
 
 At [Unbabel](https://github.com/Unbabel) we deal with a lot of translation data. One of the metrics we use for our clients' SLAs is the delivery time of a translation.
