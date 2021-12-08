@@ -2,4 +2,4 @@ export function config(): string {
   return 'config';
 }
 
-export const API_URL = '/api';
+export const API_URL = '/api/message';
