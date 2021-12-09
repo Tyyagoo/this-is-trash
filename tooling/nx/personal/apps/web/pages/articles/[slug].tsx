@@ -10,13 +10,12 @@ import {
 } from '@personal/markdown';
 import { mdxElements } from '@personal/shared/mdx-elements';
 import { MDXRemote } from 'next-mdx-remote';
-
-const ARTICLES_FOLDER = join(process.cwd(), '_articles');
 export interface ArticleProps extends ParsedUrlQuery {
   slug: string;
 }
 
 export const getStaticPaths: GetStaticPaths<ArticleProps> = async () => {
+  const ARTICLES_FOLDER = join(process.cwd(), process.env.articlesPath);
   const paths = fs
     .readdirSync(ARTICLES_FOLDER)
     .map((path) => path.replace(/\.mdx?$/, ''))
@@ -33,6 +32,7 @@ export const getStaticProps: GetStaticProps<MarkdownRenderingResult> = async ({
 }: {
   params: ArticleProps;
 }) => {
+  const ARTICLES_FOLDER = join(process.cwd(), process.env.articlesPath);
   const markdown = getParsedFileContentBySlug(params.slug, ARTICLES_FOLDER);
   const html = await renderMarkdown(markdown.content);
   return {
