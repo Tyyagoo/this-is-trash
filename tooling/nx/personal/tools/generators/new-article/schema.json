@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "cli": "nx",
+  "$id": "new-article",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Article title.",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      },
+      "x-prompt": "What's the title of your new article?"
+    },
+    "author": {
+      "type": "string",
+      "description": "Name of article author."
+    }
+  },
+  "required": ["title"]
+}
