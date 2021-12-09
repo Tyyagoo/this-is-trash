@@ -2,6 +2,7 @@
   "version": 2,
   "projects": {
     "markdown": "libs/markdown",
+    "shared-mdx-elements": "libs/shared/mdx-elements",
     "web": "apps/web",
     "web-e2e": "apps/web-e2e"
   }

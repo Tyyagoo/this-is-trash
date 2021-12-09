@@ -8,6 +8,7 @@ import {
   renderMarkdown,
   MarkdownRenderingResult,
 } from '@personal/markdown';
+import { mdxElements } from '@personal/shared/mdx-elements';
 import { MDXRemote } from 'next-mdx-remote';
 
 const ARTICLES_FOLDER = join(process.cwd(), '_articles');
@@ -53,7 +54,7 @@ export function Article({ frontMatter, html }: MarkdownRenderingResult) {
         <hr />
 
         <main>
-          <MDXRemote {...html} />
+          <MDXRemote {...html} components={mdxElements} />
         </main>
       </article>
     </div>
