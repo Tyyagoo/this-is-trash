@@ -1,26 +1,35 @@
 import React, { useEffect, useState } from 'react';
-import { Message } from '@bghoard/api-interfaces';
+import { Game } from '@bghoard/api-interfaces';
 
 export const App = () => {
-  const [m, setMessage] = useState<Message>({ message: '' });
+  const [games, setGames] = useState<Game[]>([]);
 
   useEffect(() => {
-    fetch('/api')
+    fetch('/api/games')
       .then((r) => r.json())
-      .then(setMessage);
+      .then(setGames);
   }, []);
 
   return (
     <>
       <div style={{ textAlign: 'center' }}>
-        <h1>Welcome to review!</h1>
-        <img
-          width="450"
-          src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png"
-          alt="Nx - Smart, Extensible Build Framework"
-        />
+        <h1>Board Game Hoard: Review</h1>
       </div>
-      <div>{m.message}</div>
+
+      <div>
+        {games.map((game, index) => (
+          <div key={index}>
+            <h3>{game.name}</h3>
+            {game.image && <img src={game.image} alt={`${game.name}`}></img>}
+            <p>{game.description}</p>
+            <p>
+              <b>USD {game.price.toFixed(2)}</b>
+            </p>
+            {game.rating && <p>Rating: {game.rating.toFixed(2)} stars</p>}
+            <hr />
+          </div>
+        ))}
+      </div>
     </>
   );
 };
