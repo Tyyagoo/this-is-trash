@@ -16,7 +16,10 @@
     "baseUrl": ".",
     "paths": {
       "@personal/markdown": ["libs/markdown/src/index.ts"],
-      "@personal/shared/mdx-elements": ["libs/shared/mdx-elements/src/index.ts"]
+      "@personal/shared/mdx-elements": [
+        "libs/shared/mdx-elements/src/index.ts"
+      ],
+      "@personal/shared/ui": ["libs/shared/ui/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
