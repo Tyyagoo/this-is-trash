@@ -10,96 +10,339 @@
   </head>
   <body>
     <div id="app">
-      <h1 id="title">freeCodeCamp Survey Form</h1>
+      <h1 id="title">Valorant Survey</h1>
       <p id="description">
-        Thank you for taking the time to help us improve the platform
+        Please don't open this on mobile devices <span>😭</span>
       </p>
       <form id="survey-form">
         <div class="form-group">
-          <label for="name" id="name-label">
-            Name
-            <input
-              id="name"
-              name="name"
-              type="text"
-              placeholder="Enter your name"
-              required
-            />
+          <label for="name" id="name-label" class="label-title">
+            Nickname
           </label>
+          <input
+            id="name"
+            name="name"
+            type="text"
+            placeholder="Enter your nickname"
+            required
+          />
         </div>
         <div class="form-group">
-          <label for="email" id="email-label">
+          <label for="email" id="email-label" class="label-title">
             Email
-            <input
-              id="email"
-              name="email"
-              type="email"
-              placeholder="Enter your email"
-              required
-            />
           </label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            placeholder="Enter your email"
+            required
+          />
         </div>
         <div class="form-group">
-          <label for="number" id="number-label">
+          <label for="number" id="number-label" class="label-title">
             Age
-            <input
-              id="number"
-              name="age"
-              type="number"
-              min="13"
-              max="100"
-              placeholder="Enter your age"
-            />
           </label>
+          <input
+            id="number"
+            name="age"
+            type="number"
+            min="13"
+            max="100"
+            placeholder="Enter your age"
+          />
         </div>
         <div class="form-group">
-          <label for="dropdown">
-            Select some option
-            <select id="dropdown" name="dropdown">
-              <option value="1">Option 1</option>
-              <option value="2">Option 2</option>
-              <option value="3">Option 3</option>
-            </select>
-          </label>
+          <p class="label-title">What's your favorite role?</p>
+          <br />
+          <div class="roles">
+            <label class="input-custom-label">
+              <input name="radio-opt" value="controller" type="radio" />
+              <span>
+                <img
+                  class="role-icon"
+                  src="https://media.valorant-api.com/agents/roles/4ee40330-ecdd-4f2f-98a8-eb1243428373/displayicon.png"
+                  alt=""
+                />
+                <br />
+                Controller
+              </span>
+            </label>
+            <label class="input-custom-label">
+              <input name="radio-opt" value="duelist" type="radio" />
+              <span>
+                <img
+                  class="role-icon"
+                  src="https://media.valorant-api.com/agents/roles/dbe8757e-9e92-4ed4-b39f-9dfc589691d4/displayicon.png"
+                  alt=""
+                />
+                <br />
+                Duelist
+              </span>
+            </label>
+            <label class="input-custom-label">
+              <input name="radio-opt" value="initiator" type="radio" />
+              <span>
+                <img
+                  class="role-icon"
+                  src="https://media.valorant-api.com/agents/roles/1b47567f-8f7b-444b-aae3-b0c634622d10/displayicon.png"
+                  alt=""
+                />
+                <br />
+                Initiator
+              </span>
+            </label>
+            <label class="input-custom-label">
+              <input name="radio-opt" value="sentinel" type="radio" />
+              <span>
+                <img
+                  class="role-icon"
+                  src="https://media.valorant-api.com/agents/roles/5fc02f99-4091-4486-a531-98459a3e95e9/displayicon.png"
+                  alt=""
+                />
+                <br />
+                Sentinel
+              </span>
+            </label>
+          </div>
         </div>
         <div class="form-group">
-          <p>Would you recommend freeCodeCamp to a friend?</p>
-          <label>
-            <input name="radio-opt" value="yes" type="radio" />
-            Yes
+          <label for="dropdown" class="label-title">
+            What's is your rank?
           </label>
-          <label>
-            <input name="radio-opt" value="no" type="radio" />
-            No
-          </label>
-          <label>
-            <input name="radio-opt" value="why" type="radio" />
-            Why?
-          </label>
+          <select id="dropdown" name="dropdown">
+            <option value="none" selected disabled>None</option>
+            <option value="radiant">Radiant</option>
+            <option value="immortal">Immortal</option>
+            <option value="diamond">Diamond</option>
+            <option value="platinum">Platinum</option>
+            <option value="gold">Gold</option>
+            <option value="silver">Silver</option>
+            <option value="bronze">Bronze</option>
+            <option value="iron">Iron</option>
+          </select>
         </div>
         <div class="form-group">
-          <p>Select a lot of options</p>
-          <label>
-            <input type="checkbox" />
-            Option
-          </label>
-          <label>
-            <input type="checkbox" />
-            Option
-          </label>
-          <label>
-            <input type="checkbox" />
-            Option
-          </label>
-          <label>
-            <input type="checkbox" />
-            Option
-          </label>
+          <p class="label-title">Select your favorite agents</p>
+          <div class="agents">
+            <label class="input-custom-label">
+              <input type="checkbox" value="jett" />
+              <span>
+                <img
+                  class="agent-icon"
+                  src="https://media.valorant-api.com/agents/add6443a-41bd-e414-f6ad-e58d267f4e95/displayiconsmall.png"
+                  alt=""
+                />
+                <br />
+                Jett
+              </span>
+            </label>
+            <label class="input-custom-label">
+              <input type="checkbox" value="phoenix" />
+              <span>
+                <img
+                  class="agent-icon"
+                  src="https://media.valorant-api.com/agents/eb93336a-449b-9c1b-0a54-a891f7921d69/displayiconsmall.png"
+                  alt=""
+                />
+                <br />
+                Phoenix
+              </span>
+            </label>
+            <label class="input-custom-label">
+              <input type="checkbox" value="raze" />
+              <span>
+                <img
+                  class="agent-icon"
+                  src="https://media.valorant-api.com/agents/f94c3b30-42be-e959-889c-5aa313dba261/displayiconsmall.png"
+                  alt=""
+                />
+                <br />
+                Raze
+              </span>
+            </label>
+            <label class="input-custom-label">
+              <input type="checkbox" value="reyna" />
+              <span>
+                <img
+                  class="agent-icon"
+                  src="https://media.valorant-api.com/agents/a3bfb853-43b2-7238-a4f1-ad90e9e46bcc/displayiconsmall.png"
+                  alt=""
+                />
+                <br />
+                Reyna
+              </span>
+            </label>
+            <label class="input-custom-label">
+              <input type="checkbox" value="yoru" />
+              <span>
+                <img
+                  class="agent-icon"
+                  src="https://media.valorant-api.com/agents/7f94d92c-4234-0a36-9646-3a87eb8b5c89/displayiconsmall.png"
+                  alt=""
+                />
+                <br />
+                Yoru
+              </span>
+            </label>
+
+            <label class="input-custom-label">
+              <input type="checkbox" value="breach" />
+              <span>
+                <img
+                  class="agent-icon"
+                  src="https://media.valorant-api.com/agents/5f8d3a7f-467b-97f3-062c-13acf203c006/displayiconsmall.png"
+                  alt=""
+                />
+                <br />
+                Breach
+              </span>
+            </label>
+            <label class="input-custom-label">
+              <input type="checkbox" value="kayo" />
+              <span>
+                <img
+                  class="agent-icon"
+                  src="https://media.valorant-api.com/agents/601dbbe7-43ce-be57-2a40-4abd24953621/displayiconsmall.png"
+                  alt=""
+                />
+                <br />
+                KAY/O
+              </span>
+            </label>
+            <label class="input-custom-label">
+              <input type="checkbox" value="skye" />
+              <span>
+                <img
+                  class="agent-icon"
+                  src="https://media.valorant-api.com/agents/6f2a04ca-43e0-be17-7f36-b3908627744d/displayiconsmall.png"
+                  alt=""
+                />
+                <br />
+                Skye
+              </span>
+            </label>
+            <label class="input-custom-label">
+              <input type="checkbox" value="sova" />
+              <span>
+                <img
+                  class="agent-icon"
+                  src="https://media.valorant-api.com/agents/ded3520f-4264-bfed-162d-b080e2abccf9/displayiconsmall.png"
+                  alt=""
+                />
+                <br />
+                Sova
+              </span>
+            </label>
+
+            <label class="input-custom-label">
+              <input type="checkbox" value="astra" />
+              <span>
+                <img
+                  class="agent-icon"
+                  src="https://media.valorant-api.com/agents/41fb69c1-4189-7b37-f117-bcaf1e96f1bf/displayiconsmall.png"
+                  alt=""
+                />
+                <br />
+                Astra
+              </span>
+            </label>
+            <label class="input-custom-label">
+              <input type="checkbox" value="brimstone" />
+              <span>
+                <img
+                  class="agent-icon"
+                  src="https://media.valorant-api.com/agents/9f0d8ba9-4140-b941-57d3-a7ad57c6b417/displayiconsmall.png"
+                  alt=""
+                />
+                <br />
+                Brimstone
+              </span>
+            </label>
+            <label class="input-custom-label">
+              <input type="checkbox" value="omen" />
+              <span>
+                <img
+                  class="agent-icon"
+                  src="https://media.valorant-api.com/agents/8e253930-4c05-31dd-1b6c-968525494517/displayiconsmall.png"
+                  alt=""
+                />
+                <br />
+                Omen
+              </span>
+            </label>
+            <label class="input-custom-label">
+              <input type="checkbox" value="viper" />
+              <span>
+                <img
+                  class="agent-icon"
+                  src="https://media.valorant-api.com/agents/707eab51-4836-f488-046a-cda6bf494859/displayiconsmall.png"
+                  alt=""
+                />
+                <br />
+                Viper
+              </span>
+            </label>
+            <label class="input-custom-label">
+              <input type="checkbox" value="chamber" />
+              <span>
+                <img
+                  class="agent-icon"
+                  src="https://media.valorant-api.com/agents/22697a3d-45bf-8dd7-4fec-84a9e28c69d7/displayiconsmall.png"
+                  alt=""
+                />
+                <br />
+                Chamber
+              </span>
+            </label>
+            <label class="input-custom-label">
+              <input type="checkbox" value="cypher" />
+              <span>
+                <img
+                  class="agent-icon"
+                  src="https://media.valorant-api.com/agents/117ed9e3-49f3-6512-3ccf-0cada7e3823b/displayiconsmall.png"
+                  alt=""
+                />
+                <br />
+                Cypher
+              </span>
+            </label>
+            <label class="input-custom-label">
+              <input type="checkbox" value="killjoy" />
+              <span>
+                <img
+                  class="agent-icon"
+                  src="https://media.valorant-api.com/agents/1e58de9c-4950-5125-93e9-a0aee9f98746/displayiconsmall.png"
+                  alt=""
+                />
+                <br />
+                Killjoy
+              </span>
+            </label>
+            <label class="input-custom-label">
+              <input type="checkbox" value="sage" />
+              <span>
+                <img
+                  class="agent-icon"
+                  src="https://media.valorant-api.com/agents/569fdd95-4d10-43ab-ca70-79becc718b46/displayiconsmall.png"
+                  alt=""
+                />
+                <br />
+                Sage
+              </span>
+            </label>
+          </div>
         </div>
         <div class="form-group">
           <textarea placeholder="Write something here!"></textarea>
         </div>
         <button id="submit" type="submit">Submit</button>
+        <span id="credits"
+          >Background image
+          <a href="http://www.freepik.com" target="_blank"
+            >designed by upklyak / Freepik</a
+          ></span
+        >
       </form>
     </div>
   </body>
