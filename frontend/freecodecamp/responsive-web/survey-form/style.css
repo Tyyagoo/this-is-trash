@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap");
+
+:root {
+  --white-color: #f3f3f3;
+  --brand-color: #46d369;
+}
+
+body {
+  height: 100vh;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.4;
+
+  background-image: url(images/bg.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #464646;
+}
+
+.label-title {
+  display: flex;
+  align-items: center;
+  font-size: 1.125rem;
+  margin-bottom: 0.5rem;
+}
+
+#app {
+  height: 100%;
+  width: 100%;
+  max-width: 720px;
+  margin: 70px auto;
+  color: var(--white-color);
+  text-align: center;
+}
+
+#title {
+  font-size: 32px;
+}
+
+#description,
+#credits {
+  font-style: italic;
+  font-weight: 200;
+  text-shadow: 1px 1px 1px rgb(0 0 0 / 40%);
+}
+
+#description > span {
+  font-style: normal;
+}
+
+#survey-form {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 32px;
+  border-radius: 16px;
+  background-color: rgba(27, 27, 50, 0.8);
+}
+
+#name,
+#email,
+#number,
+#dropdown,
+#submit {
+  width: auto;
+  padding: 10px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group > .agents,
+.form-group > .roles {
+  display: grid;
+  justify-items: center;
+}
+
+.form-group > .roles {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.form-group > .agents {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+.input-custom-label {
+  cursor: pointer;
+}
+
+.input-custom-label input:checked + span {
+  color: var(--brand-color);
+  border-color: var(--brand-color);
+}
+
+.role-icon,
+.agent-icon {
+  width: 32px;
+  height: 32px;
+  border-width: 2px;
+  border-style: solid;
+}
+
+.role-icon {
+  border-radius: 45%;
+  background-color: rgb(180, 180, 180);
+}
+
+.agent-icon {
+  border-radius: 30%;
+  background-color: #a7f7df;
+}
+
+textarea {
+  height: 100px;
+  padding: 5px;
+}
+
+#submit {
+  color: var(--white-color);
+  background-color: var(--brand-color);
+  border: none;
+  text-transform: uppercase;
+  transition: background-color 0.1s ease-in-out;
+}
+
+#submit:hover {
+  background-color: #3aad57;
+}
+
+@media only screen and (max-width: 496px) {
+  .form-group > .agents {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .form-group > .roles {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  body {
+    background-image: url(https://image.freepik.com/free-vector/teenager-boy-bedroom-interior-computers-desk_107791-2738.jpg);
+  }
+}

@@ -1,0 +1,215 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code&family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+* {
+  box-sizing: border-box;
+  /*Prevent content selection.*/
+  user-select: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+:root {
+  --bg-color: rgb(224, 232, 255);
+
+  --brand-color-h: 245;
+  --brand-color-s: 75%;
+  --brand-color-l: 52%;
+
+  --card-bg-color: rgb(243, 243, 243);
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--bg-color);
+  font-size: 1.8rem;
+  font-family: "Red Hat Display", Roboto, sans-serif;
+  font-weight: 400;
+}
+
+#app {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  height: 70px;
+  background-color: black;
+}
+
+#main {
+  text-align: center;
+}
+
+#bg-container {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  max-height: 400px;
+  overflow: hidden;
+  z-index: -1;
+  background: linear-gradient(to top, var(--bg-color) 10%, transparent 90%);
+}
+
+#bg-img {
+  width: 110%;
+  height: auto;
+  margin: -10px;
+  -webkit-filter: blur(4px);
+  filter: blur(4px);
+}
+
+#bg-img::after {
+  width: inherit;
+  height: inherit;
+  background: linear-gradient(to top, #111 10%, transparent 90%);
+}
+
+#container {
+  max-width: 700px;
+  margin: auto;
+  margin-top: 150px;
+  background-color: var(--card-bg-color);
+  border-radius: 16px;
+  padding: 2px 16px;
+
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+
+#container:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+#img-div {
+  display: inline-block;
+  margin-top: -150px;
+  background: transparent;
+  font-style: italic;
+}
+
+#image {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: auto;
+  max-width: 297px;
+  border: 3px solid var(--card-bg-color);
+  border-radius: 50%;
+}
+
+#title {
+  font-family: "Nanum Pen Script", cursive;
+  font-size: 4.8rem;
+  font-weight: 700;
+}
+
+#subtitle {
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+
+#subtitle span {
+  margin-left: 4px;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.486);
+}
+#tribute-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+#tribute-info section,
+#tribute-info details {
+  margin: 1px;
+  text-align: left;
+  text-indent: 3rem;
+}
+
+#tribute-info details summary {
+  cursor: pointer;
+  font-size: 2.4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 15px;
+  color: white;
+  background-color: hsl(
+    var(--brand-color-h),
+    var(--brand-color-s),
+    var(--brand-color-l)
+  );
+  border-top-left-radius: 16px;
+
+  transition: 0.2s;
+}
+
+#tribute-info details summary:hover {
+  background-color: hsl(
+    var(--brand-color-h),
+    calc(var(--brand-color-s) + 15%),
+    var(--brand-color-l)
+  );
+}
+
+#tribute-info details[open] summary {
+  background-color: hsl(
+    var(--brand-color-h),
+    var(--brand-color-s),
+    calc(var(--brand-color-l) - 15%)
+  );
+}
+
+#tribute-info details[open] summary ~ * {
+  animation: sweep 0.5s ease-in-out;
+}
+
+@keyframes sweep {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+pre {
+  text-align: left;
+  background-color: #222;
+  color: rgb(190, 190, 190);
+  padding: 10px 20px;
+  border-bottom-right-radius: 16px;
+}
+
+pre code {
+  font-family: "Fira Code", monospace;
+  font-size: 14px;
+}
+
+pre .red {
+  color: #bf3140;
+}
+
+pre .green {
+  color: #75a175;
+}
+
+pre .purple {
+  color: #b826ac;
+}
+
+pre .sienna {
+  color: #986850;
+}
+
+footer {
+  height: 120px;
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+}
